@@ -26,10 +26,16 @@
     import Servers from '@/components/tutcomponents07/SecondComponent/Server/Servers';
     import ServerDetails from '@/components/tutcomponents07/SecondComponent/Server/ServerDetails';
 
+  // IF APPLYING THE LAZY LOAD
+  // const SCHeader  = () => import(/* webpackChunkName: "grp-tut-components2.1" */ '@/components/tutcomponents07/SecondComponent/Common/Header');
+  // const SCFooter  = () => import(/* webpackChunkName: "grp-tut-components2.1" */ '@/components/tutcomponents07/SecondComponent/Common/Footer');
+  // const SCServers  = () => import(/* webpackChunkName: "grp-tut-components2.1" */ '@/components/tutcomponents07/SecondComponent/Server/Servers');
+  // const SCServerDetails  = () => import(/* webpackChunkName: "grp-tut-components2.1" */ '@/components/tutcomponents07/SecondComponent/Server/ServerDetails');
+
     export default {
         components: {
             'app-header': Header,
-            'app-servers': Servers, 
+            'app-servers': Servers,
             'app-server-details': ServerDetails,
             'app-footer': Footer
         }

@@ -1,22 +1,22 @@
 // $FrankRuhlLibre: 'Frank Ruhl Libre', serif;
 $Opensans :  'Open Sans', sans-serif;
-$Montserrat : 'Montserrat', sans-serif;
+$Arizonia : 'Arizonia', sans-serif;
 $System        : -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5,{
-	font-family: $Montserrat;
-	font-weight: 600; 
+	// font-family: $Montserrat;
+	font-weight: 600;
 }
- 
+
 
 h1 {
     font-size: 2em;
     line-height: 1.25em;
     @include bp('md'){
         font-size: 2.5em;
-        line-height:  1.125em;        
+        line-height:  1.125em;
     }
-    @include bp('lg'){               
+    @include bp('lg'){
         font-size: 3em;
         line-height: 1.05em;
     }
@@ -27,10 +27,10 @@ h2 {
     line-height: 1.15384615em;
     @include bp('md'){
         font-size: 2em;
-        line-height:  1.25em;        
+        line-height:  1.25em;
     }
-    @include bp('lg'){               
-        font-size: 2.25em; 
+    @include bp('lg'){
+        font-size: 2.25em;
     }
 }
 
@@ -39,37 +39,37 @@ h3 {
     line-height: 1.13636364em;
     @include bp('md'){
         font-size: 1.5em;
-        line-height:  1.25em;        
+        line-height:  1.25em;
     }
-    @include bp(large){               
-        font-size: 1.75em ; 
-    }    
+    @include bp(large){
+        font-size: 1.75em ;
+    }
 }
 
 h4 {
     font-size: 1.125em ;
     line-height: 1.11111111em;
-    @include bp('md'){ 
-        line-height:  1.22222222;        
-    } 
+    @include bp('md'){
+        line-height:  1.22222222;
+    }
 }
 
 h5 {
     font-size: 1.1em ;
     line-height: 1em;
-    @include bp('md'){ 
-        line-height:  1;        
-    } 
-} 
+    @include bp('md'){
+        line-height:  1;
+    }
+}
 
-.font-montserrat {    
-    font-family: $Montserrat !important;
-}  
+.font-arizonia {
+    font-family: $Arizonia !important;
+}
 
 
-.font-opensans {    
+.font-opensans {
     font-family: $Opensans !important;
-}  
+}
 
 .font-size-13 {
     font-size: 0.8125rem

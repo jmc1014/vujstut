@@ -1,13 +1,14 @@
 /*!
- * @project     Maxicare - Health Card
+ * @project     VUE.js
  * @version     1.0
- * @author      James Martin Carlos
- * @date        October 18, 2017
+ * @author
+ * @date        June 06, 2018
  */
 
 @import 'base/_variables.scss';
 
-@import 'vendors/bootstrap4/bootstrap_site.scss';
+// @import 'vendors/bootstrap4.1/bootstrap_custom.scss';
+@import 'vendors/bootstrap4.1/bootstrap.scss';
 
 @import 'helpers/_mixins.scss',
         'helpers/_helpers.scss',
@@ -16,11 +17,12 @@
 @import 'base/_normalize.scss',
         'base/_typography.scss';
 
- @import 'components/_link.scss';
+ @import 'components/_tut10six.scss',
+         'components/_tut14.scss';
 
- @import 'layout/_navigation.scss',
-         'layout/_header.scss',
-         'layout/_footer.scss';
+ // @import 'layout/_navigation.scss',
+ //         'layout/_header.scss',
+ //         'layout/_footer.scss';
         // 'layout/_display.scss',
         // 'layout/_banner.scss',
         // 'layout/_section.scss',
@@ -71,20 +73,20 @@ body {
     background-color: $white;
 }
 
-.wf-primary body {
-    font-family: $Opensans;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeSpeed;
-}
+// .wf-primary body {
+//     font-family: $Opensans;
+//     -moz-osx-font-smoothing: grayscale;
+//     -webkit-font-smoothing: antialiased;
+//     text-rendering: optimizeSpeed;
+// }
 
 
-.wf-secondary  {
-    h1, h2, h3, h4, h5, h6 {
-        font-family: $Montserrat;
-        font-weight: 600;
-    }
-}
+// .wf-secondary  {
+//     h1, h2, h3, h4, h5, h6 {
+//         font-family: $Montserrat;
+//         font-weight: 600;
+//     }
+// }
 
 
 

@@ -8,6 +8,5 @@
     </div>
 </template>
 <script>
-	/* eslint-disable */
-	
+/* eslint-disable */
 </script>

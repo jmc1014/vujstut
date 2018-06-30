@@ -1,0 +1,138 @@
+@mixin fadein($content) {
+    @if($content) { 
+        transform: translate(0px, 0px);
+        opacity: 1;
+    } @else {
+        overflow-y: auto;
+        visibility: visible;
+    }
+}
+
+ 
+.c-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    left: 0;
+    outline: 0 none;
+    position: fixed;
+    display: none;
+    right: 0; 
+    top: 0;
+    visibility: hidden;
+    z-index: 3999;
+    transition: visibility 0.15s linear 0s;
+    color: initial;
+
+    &__document {
+        background-color: #ffffff;
+        border: 1px solid #666666;
+        border-radius: 3px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        left: 0;
+        margin: 50px auto;
+        padding-bottom: 15px;
+        padding-top: 20px;
+        position: absolute;
+        right: 0;
+        z-index: 3999;
+        opacity: 0;
+        transform: translate(0px, -30%);
+        transition: all 0.20s ease-out 0s; 
+    }
+
+    &__body {
+       /* overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 800px;*/
+    }
+
+    &__action {
+        padding-top: 15px;
+    }
+
+    &--reveal {
+        display: block !important;
+
+        @include fadein(false);
+
+        .c-modal__document {
+           @include fadein(true);
+        }
+    }
+
+    &--open {
+        overflow: hidden;
+    }
+
+    &__header{
+        // border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 20px;
+
+        &__h3 {
+            // font-family: $FrankRuhlLibre;
+            font-size: 30px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__tab {
+        &--section {
+            display: none;
+        }
+        &--active {
+            display: block;
+        }
+    }
+
+    .button + .button {
+        margin-left: 10px;
+    }
+
+    &__times {
+        color: black;
+        font-size: 2rem;
+        position: absolute;        
+        right: 9px;
+        top: 0;
+        @include bp(desktop){            
+            right: 27px;
+            top: 20px;
+        }
+        &--rounded {
+            color: white;    
+            position: absolute;
+            right: -1rem;
+            top: -1rem;
+            background: #000;
+            padding: .25rem .5rem;
+            border-radius: 50%; 
+            border: 2px solid #9c9c9c;
+        }
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+.c-modal-backdrop {
+    opacity: 0.15s linear 0s;
+}
+
+.c-modal_close {
+    &--image {
+        cursor: pointer;
+    }
+
+    &--top {
+        font-size: 30px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,249 @@
+/**
+ * --------------------------------------
+ * HELPERS
+ * --------------------------------------
+ */
+
+.b-lazy {
+    opacity:0;
+    transition:opacity .3s ease;
+    will-change:opacity
+}
+
+.b-loaded {
+    opacity:1;
+}  
+ 
+.font-weight-light {
+	font-weight: 300;
+}
+ 
+.bg-center{
+	background-position: center;
+} 
+.bg-vertical {
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+.relative {
+	position: relative;
+}
+.overflow-hidden {
+	overflow: hidden;
+} 
+
+.text-shadow {
+	 text-shadow: 0px -1px 4px $black;
+}
+
+.absolute-bottom {
+	position: absolute; 
+	bottom: 0;
+}
+
+.figure-img {
+	margin: 1rem 0;
+
+	&.left{
+		float: none;
+		text-align: center;
+		@include bp('md') {
+			float: left;
+			margin-right:1rem;
+		}
+	}
+
+	&.right{
+		float: none;
+		text-align: center;
+		@include bp('md') {
+			float: right;
+			margin-left:1rem;
+		}
+	}
+}
+
+.figure-caption {
+	padding: .5rem;
+	font-style:italic;
+	text-align: center;
+}
+
+
+.svg-icons {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    & svg {
+        height: inherit;
+        width: inherit;
+    }
+
+    &--sm {
+	    height: 1.5rem;
+	    width: 1.5rem;
+    }
+
+    &--md {
+	    height: 3.5rem;
+	    width: 3.5rem;
+	    margin-top: -1rem;
+	    margin-bottom: -1rem;
+    }
+} 
+ 
+.custom-select {
+    padding-top: 0;
+    padding-bottom: 0; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.product-card { 
+    height: 3.5rem;
+    max-width: 10rem;
+    transform: rotate(-5deg);
+	& img {
+		position: absolute;	
+		bottom: 25%;
+	}	
+}
+.product-content {
+	@include bp('sm') {
+		min-height: 9rem;
+	}
+	@include bp('md') {
+		min-height: 6rem;
+	}
+	@include bp('lg') {
+		min-height: 12rem;
+	}
+	@include bp('xl') {
+		min-height: 10rem;
+	}
+}
+
+.product-blurb{	
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.product-blurb-blur {	
+	opacity:.9;
+}
+
+.product-shadow {
+    box-shadow: 3px 7px 27px -4px $black;
+    border-radius: 4%;
+}
+
+.quantity-box {	
+    line-height: 1.75rem; 
+}
+ 
+.remove-item {
+	position: absolute;
+	right: 1rem;
+	top: 0;
+	z-index: 1;
+	font-size: 1.5rem;
+	line-height: 1rem;	
+}
+
+.spinner {
+	margin: 0 auto;
+	width: 70px;
+	text-align: center;
+
+	&:before, &:after {
+		content: '';
+		display: block;
+	}
+
+	&:before, &:after, & .bounce {
+		  width: 1rem;
+		  height: 1rem;
+		  background-color: $blue;
+
+		  border-radius: 100%;
+		  display: inline-block;
+		  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+		  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	}
+
+	&:before {  	
+	  -webkit-animation-delay: -0.32s;
+	  animation-delay: -0.32s;
+	}
+	& .bounce  {
+	  -webkit-animation-delay: -0.16s;
+	  animation-delay: -0.16s;
+	}
+} 
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+li p {
+	margin-bottom: .25rem;
+}
+
+.intl-tel-input {
+    width: 100%;
+}
+
+.banner-gredient {
+
+
+	@include bp('md') {
+		&--both {			
+			&:before  {
+				content: '';
+			    position: absolute;
+			    left: 0;
+			    z-index: 1;
+			  	display: block;
+			  	height: 100%;
+			  	background: linear-gradient(to left, rgba($white, 0), $white);
+			 
+			    width: 15%; 
+			}		
+		}
+		
+		&:after  {
+			content: '';
+		    position: absolute;
+		    top: 0;
+		    right: -1px;
+		    z-index: 1;
+		  	display: block;
+		  	height: 100%;
+		  	background: linear-gradient(to right, rgba($white, 0), $white);		 
+		    width: 15%; 
+		}
+ 
+    }
+}
+
+
+
+@for $i from 1 through 4 {
+    .zindex_#{$i} {
+        z-index:  $i !important
+    }
+    .zindex-#{$i} {
+        z-index:  -$i !important
+    }
+}

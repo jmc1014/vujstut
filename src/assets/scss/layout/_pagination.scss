@@ -1,0 +1,25 @@
+.pagination {
+	@include li();  
+	padding: 0; 
+	display: inline-block;
+	margin-bottom: 0;
+	&__item {
+		@include li();
+		display: inline-block;		 
+	}
+	&__link {
+		// padding: 5px 15px !important; 
+	}
+	&__arrow {    
+		display: inline-block;
+	    font-size: 5em;
+	    margin-top: -18px;
+	    padding: 0 5px; 
+	    vertical-align: middle;
+	    color: darken($green, 25%); 
+	}
+	&-holder {
+		text-align: center;
+		padding-top: 25px; 
+	}
+}

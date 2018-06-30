@@ -1,0 +1,103 @@
+/*!
+ * @project     Maxicare - Health Card
+ * @version     1.0
+ * @author      James Martin Carlos
+ * @date        October 18, 2017
+ */
+
+@import 'base/_variables.scss';
+
+@import 'vendors/bootstrap4/bootstrap_site.scss';
+
+@import 'helpers/_mixins.scss',
+        'helpers/_helpers.scss',
+        'helpers/_vendor-prefixes.scss';
+
+@import 'base/_normalize.scss',
+        'base/_typography.scss';
+
+ @import 'components/_link.scss';
+
+ @import 'layout/_navigation.scss',
+         'layout/_header.scss',
+         'layout/_footer.scss';
+        // 'layout/_display.scss',
+        // 'layout/_banner.scss',
+        // 'layout/_section.scss',
+        // 'layout/_footer.scss',
+        // 'layout/_forms.scss',
+        // 'layout/_pagination.scss';
+        // 'layout/_grid.scss',
+        // ,
+        // ,
+        //
+
+
+/* @import 'components/_link.scss',
+        'components/_modal.scss',
+        'components/_collapse.scss'; */
+// 'components/_list.scss',
+//         'components/_buttons.scss',
+//         'components/_card.scss' ,
+//         'components/_figure.scss' ,
+//         'components/_table.scss' ;
+        //
+        // 'components/_search.scss',
+        // 'components/_hero.scss'
+
+// @import 'pages/_home.scss', ;
+
+// @import 'themes/*';
+
+// a , a:hover{
+//     text-decoration: none;
+// }
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+    font-size: 16px;
+    // @media (min-width: 992px) and (max-height: 800px) {
+    //     font-size: 14px;
+    // }
+}
+
+
+body {
+    font-family: $System;
+    font-size: $font-size-base;
+    line-height: 1.5em;
+    height: 100%;
+    background-color: $white;
+}
+
+.wf-primary body {
+    font-family: $Opensans;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+}
+
+
+.wf-secondary  {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $Montserrat;
+        font-weight: 600;
+    }
+}
+
+
+
+.main {
+    position: relative;
+    z-index: 1;
+    /* &:after{
+        content : "";
+        display: none;
+        height: auto;
+        @include bp('lg'){
+            display: block;
+            height: 3.5rem;
+        }
+    }  */
+}
